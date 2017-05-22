@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tr test</title>
+	<script src="./javascripts/table2json.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><span class="t">1</span></td>
+			<td><span class="t">2</span></td>
+			<td><span class="t">3</span></td>
+			<td><span class="t">4</span></td>
+			<td><span class="t">5</span></td>
+			<td><span class="t">6</span></td>
+		</tr>
+		<tr>
+			<td><span class="t">2</span></td>
+			<td><span class="t">3</span></td>
+			<td><span class="t">4</span></td>
+			<td><span class="t">5</span></td>
+			<td><span class="t">6</span></td>
+			<td><span class="t">7</span></td>
+		</tr>
+		<tr>
+			<td><span class="t">3</span></td>
+			<td><span class="t">4</span></td>
+			<td><span class="t">5</span></td>
+			<td><span class="t">6</span></td>
+			<td><span class="t">7</span></td>
+			<td><span class="t">8</span></td>
+		</tr>
+	</table>
+	<script>
+		var t2j = new T2j({
+			tr:'tr',
+			td:'.t',
+			jsonKeys:['name','address','github','email','like','age']
+		})
+		var json = t2j.getJson();
+		console.log(json)
+	</script>
+</body>
+</html>
